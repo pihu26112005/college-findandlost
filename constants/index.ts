@@ -11,7 +11,7 @@ export const SidebarLinks = [
     },
     {
         label: 'Lost Query',
-        route: '/=allLostQuery',
+        route: '/allLostQuery',
         imageUrl: 'icons/previous.svg'
     },
     {
