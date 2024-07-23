@@ -6,6 +6,7 @@ import ShineBorder from "@/components/magicui/shine-border";
 import Link from 'next/link';
 import GradualSpacing from '@/components/magicui/gradual-spacing';
 import Image from "next/image";
+import Loader from '@/components/Loader';
 
 
 const HomePage = () => {
@@ -36,6 +37,9 @@ const HomePage = () => {
   }, [user]);
   return (
     <>
+    {isLoading ? 
+      (<Loader />) : 
+      <>
       <GradualSpacing
         className="md:mt-20 mt-10 mb-16 max-w-[60%] text-white font-display text-center text-3xl font-bold tracking-[-0.1em] md:text-7xl md:leading-[5rem]"
         text={`Welcome ${user?.firstName?.split(" ")[0]}`}
@@ -67,6 +71,8 @@ const HomePage = () => {
         </Link>
       </div>
 
+    </>
+    }
     </>
   )
 }
