@@ -1,6 +1,7 @@
 "use client";
 
 import Card from '@/components/Card';
+import Loader from '@/components/Loader';
 import { useUser } from '@clerk/nextjs';
 import React, { useEffect } from 'react';
 
@@ -36,7 +37,7 @@ const MyQuery = () => {
   return (
     <>
     {isLoading ? (
-        <p className='text-white'>Loading...</p>
+        <Loader />
       ) : queryData.length === 0 ? (
         <p className='text-white'>No query found</p>
       ) : 
