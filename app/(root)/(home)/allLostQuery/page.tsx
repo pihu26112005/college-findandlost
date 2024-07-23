@@ -1,6 +1,7 @@
 "use client";
 
 import Card from '@/components/Card';
+import { Loader } from 'lucide-react';
 import React, { useEffect } from 'react';
 
 const MyQuery = () => {
@@ -32,7 +33,7 @@ const MyQuery = () => {
   return (
     <>
     {isLoading ? (
-        <p className='text-white'>Loading...</p>
+       <Loader />
       ) : queryData.length === 0 ? (
         <p className='text-white'>No query found</p>
       ) : 
