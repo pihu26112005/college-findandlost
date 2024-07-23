@@ -1,6 +1,7 @@
 "use client";
 
 import QueryItem from '@/components/QueryItem';
+import { Loader } from 'lucide-react';
 import React, { useEffect } from 'react'
 
 const QueryPage = ({ params }: { params: { id: string } }) => {
@@ -31,7 +32,7 @@ const QueryPage = ({ params }: { params: { id: string } }) => {
   return (
    <>
    {isLoading ? (
-        <p className='text-white'>Loading...</p>
+        <Loader />
       ) : 
       <QueryItem image={query.image} name={query.name} title={query.title} description={query.description} type={query.type} queryID={query.queryID} tags={query.tags} dateLost={query.dateLost} />
       }
