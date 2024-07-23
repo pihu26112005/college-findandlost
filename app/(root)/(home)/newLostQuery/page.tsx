@@ -20,6 +20,7 @@ import {
 import { Label } from "@/components/ui/label";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
+import Loader from "@/components/Loader";
 
 type Checked = DropdownMenuCheckboxItemProps["checked"]
 
@@ -181,7 +182,7 @@ export default function SignupFormDemo() {
           type="submit"
           disabled={isLoading}
         >
-          {isLoading ? "Loading..." : "Submit"}
+          {isLoading ? <Loader /> : "Submit"}
           <BottomGradient />
         </button>
 
